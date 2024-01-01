@@ -1,4 +1,11 @@
-uvicorn main:app --reload --host 0.0.0.0 --port 8001
-pip freeze > .\requirements.txt
-set TF_ENABLE_ONEDNN_OPTS=0
-docker compose up --build
+<!-- start local -->
+- py -m venv venv
+- .\cenv\Scripts\activate
+
+- python.exe -m pip install --upgrade pip
+- python -m pip install fastapi uvicorn pytorch-transformers Pillow transformers
+- python -m pip freeze > requirements.txt
+- python -m uvicorn main:app --reload
+
+- set TF_ENABLE_ONEDNN_OPTS=0
+- docker compose up --build
