@@ -1,6 +1,6 @@
 <!-- start local -->
 - py -m venv venv
-- .\cenv\Scripts\activate
+- .\venv\Scripts\activate
 
 - python.exe -m pip install --upgrade pip
 - python -m pip install fastapi uvicorn pytorch-transformers Pillow transformers
