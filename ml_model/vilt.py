@@ -8,7 +8,7 @@ processor = ViltProcessor.from_pretrained("dandelin/vilt-b32-finetuned-vqa")
 model = ViltForQuestionAnswering.from_pretrained("dandelin/vilt-b32-finetuned-vqa")
 
 def model_pipeline(input_text: str, input_image: Image) -> str:
-    """Returns"""
+    """model output."""
      # prepare inputs
     encoding = processor(input_image, input_text, return_tensors="pt")
 

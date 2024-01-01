@@ -49,4 +49,4 @@ COPY . .
 EXPOSE 8001
 
 # Run the application.
-CMD uvicorn main:app --reload --host 0.0.0.0 --port 8000
+CMD gunicorn 'venv.Lib.site-packages.fastapi.middleware.wsgi' --bind=0.0.0.0:8001
